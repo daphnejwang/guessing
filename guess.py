@@ -7,12 +7,13 @@ def main():
 	def get_guess():
 	      guess = int(raw_input())
 	      return guess
-	guess = get_guess()
-
 
 	print "Howdy, what's your name?"
 	name = raw_input("(type in your name) ")
 	print "%s, I'm thinking of a number between 1 and 100. Try to guess it" % name
+	print num
+
+	guess = get_guess()
 	
 	while guess != num:
 		num_guesses += 1
@@ -26,5 +27,4 @@ def main():
 
 if __name__ == "__main__":
 	main()
-print 1
 
