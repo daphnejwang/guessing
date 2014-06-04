@@ -1,13 +1,18 @@
 import random
 
+def get_guess():
+    while True:
+	try:
+	    guess = int(raw_input())
+      	    return guess
+	    break
+	except ValueError:
+	    print "Please enter an integer."
+
 def main():
 	num = random.randint(1,100)
 	num_guesses = 1
 	
-	def get_guess():
-	      guess = int(raw_input())
-	      return guess
-
 	print "Howdy, what's your name?"
 	name = raw_input("(type in your name) ")
 	print "%s, I'm thinking of a number between 1 and 100. Try to guess it" % name
